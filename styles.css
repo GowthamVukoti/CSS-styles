@@ -1,0 +1,43 @@
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 15rem;
+}
+.box h1{
+    color: #000080;
+    font-size: 4rem;
+    position: relative;
+    z-index: 1;
+}
+.box::after{
+    
+    content:  "";
+    position: absolute;
+    background: white;
+    inset: 10px;
+    
+}
+.box::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(orange, rgb(42, 195, 18));
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
